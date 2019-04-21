@@ -72,9 +72,10 @@ def send_message_to_recipient(message_text, recipient_id, page_id):
       'text': message_text,
     },
   }
-  r = requests.post(SEND_API_URL if page_id == 620697518375534 else SEND_API_URL2, data=json.dumps(message), headers=HEADERS)
+  r = requests.post(SEND_API_URL if page_id == '620697518375534' else SEND_API_URL2, data=json.dumps(message), headers=HEADERS)
   if r.status_code != 200:
     print('== ERROR====')
+    print(SEND_API_URL)
     print(r.json())
     print('==============')
 
