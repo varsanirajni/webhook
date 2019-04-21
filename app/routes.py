@@ -37,7 +37,7 @@ def send_message(body):
           channel = 'standby'
         for message in entry[channel]:
           sender = message['sender']['id']
-          recipient_id =  message['receipient']['id']
+          recipient_id =  message['recipient']['id']
           
           if 'message' in message: 
             webhook_type='message'
