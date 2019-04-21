@@ -6,7 +6,7 @@ import requests
 
 WEBHOOK_VERIFY_TOKEN = 'test_faq_token'
 PAGE_ACCESS_TOKEN = 'EAAeeVSYcYQYBAHng9dsVAiRdvy1kKttTvWFkcmoU2fwUr44vnJXVQJfXzuZCL8FAUM9IqZCqlZBgaWMbRw6JQ09xlF9s130Syzt1trfbZCC1jxbM4IHtPqxVXRg6DB11rsDheteFCtLuXHqJWTXqHkz4gMV7QZBRATgucFmF2ywZDZD'
-//this is for page Page_thread_queue_test
+#this is for page Page_thread_queue_test
 PAGE_ACCESS_TOKEN2 = 'EAAeeVSYcYQYBAOVAMY6T8t6htQMnJ3gGZBfq9H7VsvRaazNsqJ6FIfsIYK2GBAWRNrFzyB95BADbeZBZClDP6Vdf7Jp7gtpYIIur4oPZCBl4VXpAf3P4kjM8ldR3heOXbUZCFBzvk6rfB0iTPOlqhSKUySb8afVp8rLNnBMR1O0E71D1vfOlvAu3g0lvGRAkZD'
 
 SEND_API_URL = 'https://graph.facebook.com/v2.12/me/messages?access_token=%s'\
@@ -39,7 +39,7 @@ def send_message(body):
           sender = message['sender']['id']
           recipient_id =  message['receipient']['id']
           
-          if 'message' in message 
+          if 'message' in message: 
             webhook_type='message'
           elif 'postback' in message:
             webhook_type='postback' 
