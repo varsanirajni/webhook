@@ -48,8 +48,8 @@ def send_message(body):
           if 'text' in message[webhook_type]:
             msg_text = message[webhook_type]['text']
             if 'echoing_back' in msg_text:
-            return
-          body['echoing_back'] = 'true';
+              return
+          body['echoing_back'] = 'true'
           print('sender1111')
           if 'is_echo' in message[webhook_type]:
             send_message_to_recipient(json.dumps(body), recipient_id, sender)
